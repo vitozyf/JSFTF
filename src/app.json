@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4F4F4F",
+    "navigationBarTitleText": "JS-技术论坛",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  }
+}
