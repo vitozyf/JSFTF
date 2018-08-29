@@ -4,6 +4,15 @@
       <span class="vertical-line"></span>
       <span class="title-text">{{title}}</span>
     </div>
+  
+    <div class="body">
+      <div 
+        v-for="(item, index) in topics" 
+        :key="index" 
+        class="cell">
+        {{index}}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -12,27 +21,33 @@ export default {
   namr: 'JsCard',
 
   props: {
-    title: String
+    title: String,
+    topics: {
+      type: Array,
+      default () {
+        return []
+      }
+    }
   }
 }
 </script>
 
 <style lang="scss">
 @import "@/assets/styles/mixins/var.scss";
-.c-jscard{
+.c-jscard {
   background-color: $--color-white;
   padding: 0 10px;
   margin-bottom: 20px;
-  .title{
+  .title {
     position: relative;
     padding: 5px 10px;
-    .vertical-line{
+    .vertical-line {
       width: 5px;
       height: 15px;
       background-color: $--color-primary;
       @include block-middle(tb);
     }
-    .title-text{
+    .title-text {
       margin-left: 10px;
     }
   }

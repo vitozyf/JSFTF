@@ -1,24 +1,27 @@
 <template>
   <div class="p-index">
-    <js-card title="全部话题"></js-card>
-    <js-card title="精品话题"></js-card>
-    <js-card title="待回复话题"></js-card>
+    <js-header></js-header>
+    <js-card title="全部话题" :topics="allTopics"></js-card>
   </div>
 </template>
 
 <script>
 import JsCard from '@/components/JsCard.vue'
+import JsHeader from '@/components/JsHeader.vue'
 const CONFIG = {
   search: 'topic/search'
 }
 export default {
   data () {
     return {
+      allTopics: [],
+      noRevertTopics: []
     }
   },
 
   components: {
-    JsCard
+    JsCard,
+    JsHeader
   },
 
   methods: {
@@ -31,8 +34,7 @@ export default {
       PageIndex: 1,
       PageSize: 10
     }).then(data => {
-      console.log(data)
-      this.$showToast('success')
+      this.allTopics = data.TopicList
     })
   },
 

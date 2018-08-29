@@ -5,12 +5,16 @@ import {
 } from './http'
 
 import {
-  showToast
+  showToast,
+  showLoading,
+  hideLoading
 } from './utils'
 
 export {
   HTTP,
   POST,
   GET,
-  showToast
+  showToast,
+  showLoading,
+  hideLoading
 }

@@ -1,4 +1,7 @@
-const showToast = (title, {icon = 'none', duration = 1500} = {}, mask = false) => {
+const showToast = (title, {
+  icon = 'none',
+  duration = 1500
+} = {}, mask = false) => {
   wx.showToast({
     title: title,
     icon: icon,
@@ -7,6 +10,20 @@ const showToast = (title, {icon = 'none', duration = 1500} = {}, mask = false) =
   })
 }
 
+const showLoading = (title) => {
+  return wx.showLoading({
+    title: title
+  })
+}
+
+const hideLoading = () => {
+  // return setTimeout(() => {
+  wx.hideLoading()
+  // }, 200)
+}
+
 export {
-  showToast
+  showToast,
+  showLoading,
+  hideLoading
 }
