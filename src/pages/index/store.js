@@ -7,12 +7,13 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    count: 0
+    activeTab: {
+      tabIndex: 0
+    }
   },
   mutations: {
-    increment: (state) => {
-      const obj = state
-      obj.count += 1
+    setActiveTab: (state, activeTab) => {
+      state.activeTab.tabIndex = activeTab.tabIndex
     },
     decrement: (state) => {
       const obj = state

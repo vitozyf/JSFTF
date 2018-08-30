@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="search" unicode="&#58900;" d="M940.831 38.049l-173.597 173.611c47.231 64.536 75.117 144.12 75.117 230.218 0 215.523-174.719 390.247-390.254 390.247-215.533 0-390.251-174.724-390.251-390.247 0-215.52 174.719-390.234 390.251-390.234 86.103 0 165.69 27.885 230.229 75.113l173.603-173.612c23.445-23.45 61.454-23.45 84.902 0 23.449 23.449 23.449 61.449 0.001 84.904zM121.886 441.878c0 182.35 147.842 330.208 330.212 330.208 182.375 0 330.217-147.858 330.217-330.208 0-182.373-147.842-330.199-330.217-330.199-182.37 0-330.212 147.827-330.212 330.199z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>

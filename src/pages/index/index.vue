@@ -1,13 +1,16 @@
 <template>
   <div class="p-index">
-    <js-header></js-header>
-    <js-card title="全部话题" :topics="allTopics"></js-card>
+    <js-header @tab-change="tabChangeHandler" :tab-index="tabIndex"></js-header>
+    <js-card title="全部话题" :topics="allTopics" v-if="tabIndex === 0"></js-card>
+    <js-card title="全部话题1" :topics="allTopics" v-else-if="tabIndex === 1"></js-card>
+    <js-card title="全部话题2" :topics="allTopics" v-else-if="tabIndex === 2"></js-card>
   </div>
 </template>
 
 <script>
 import JsCard from '@/components/JsCard.vue'
 import JsHeader from '@/components/JsHeader.vue'
+import store from './store'
 const CONFIG = {
   search: 'topic/search'
 }
@@ -24,8 +27,18 @@ export default {
     JsHeader
   },
 
-  methods: {
+  computed: {
+    tabIndex () {
+      return store.state.activeTab.tabIndex
+    }
+  },
 
+  methods: {
+    tabChangeHandler (tabIndex) {
+      if (typeof tabIndex !== 'undefined') {
+        store.commit('setActiveTab', {tabIndex})
+      }
+    }
   },
 
   created () {
